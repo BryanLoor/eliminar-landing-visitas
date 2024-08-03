@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+}
+
+/* General header styles */
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px; /* Adjust height as necessary */
+  position: relative;
+  background: #282c34;
+  padding: 10px 40px;
+}
+
+.App-header h1, .App-header h2 {
+  z-index: 1;
+  color: white;
+}
+
+.App-header h1 {
+  font-size: 50px;
+}
+
+.App-header h2 {
+  font-size: 40px;
+}
+
+.App-banner {
+  width: 300px; /* Adjust width as necessary */
+  height: 300px; /* Adjust height as necessary */
+}
+
+.title-container {
+  text-align: start;
+  height: 100%;
+}
+
+.App-body {
+  margin: 5px;
+}
+
+.QRCode-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 40px;
+
+}
+
+.QRCode-container h2 {
+  margin-bottom: 20px;
+}
+.QRCode-container div span{
+  font-size: x-large;
+}
+.QRCode-container div{
+  padding: 0 100px;
+}
+
+.info_descarga {
+  text-align: center;
+  font-size: large;
+  font-weight: 500;
+  padding-top: 40px;
+}
+
+.QrCode {
+  width: 300px;
+}
+
+/* Media queries for smaller devices */
+@media (max-width: 1224px) {
+  .App-header {
+
+    height: auto; /* Adjust height as necessary */
+
+  }
+  .App-header h1 {
+    font-size: 35px;
+  }
+  .App-header h2 {
+    font-size: 30px;
+  }
+  .QRCode-container h1 {
+    margin-bottom: 20px;
+    font-size:x-large;
+
+  }
+  .QRCode-container div span{
+    font-size: large;
+  }
+  .QrCode {
+    width: 200px;
+  }
+  .QRCode-container div{
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 720px) {
+  .App-header {
+    flex-direction: column;
+
+  }
+  .App-header h1 {
+    font-size: 30px;
+  }
+  .App-header h2 {
+    font-size: 25px;
+  }
+  .App-banner {
+    width: 200px;
+    height: 200px;
+  }
+  .QRCode-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .QRCode-container div{
+    padding: 0 50px;
+  }
+}
+
+/* CSS Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 1s ease-in-out;
+}
